@@ -1,0 +1,21 @@
+<!--This file is a child template that inhereits from the parent template base.html-->
+
+{% extends 'learning_logsApp/base.html' %}
+<!--
+{block content %}
+  <p> Learning Log helps you keep track of your learning, for any topic you are learning about.</p>
+ {endblock content %}
+-->
+
+ <!-- styling the homepage with the bootstrap element Jumbotron. we will take all the codes above and style them -->
+{% block header %}
+ 	<div class='jumbotron'>
+		<h1>Track your learning.</h1>
+	</div>
+{% endblock header %}
+
+{% block content %}
+<h2>
+	<a href="{% url 'users:register' %}">Create an account</a> to make your own learning log: list the topics you are learning about, make entries about them as you go, keep your learning organized.
+</h2>
+{% endblock content %}
