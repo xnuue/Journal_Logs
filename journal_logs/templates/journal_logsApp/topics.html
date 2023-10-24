@@ -1,19 +1,19 @@
 <!--a template that displays the topics entered by the user""". it inherits the homepage link from the parent
 template base.html-->
 
-{%extends 'learning_logsApp/base.html' %}
+{%extends 'journal_logsApp/base.html' %}
 <!--
 {block content %}
   <p>Topics</p>
   <ul>
      {% for topic in topics %}
        <li>
-         <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
+         <a href="{% url 'journal_logs:topic' topic.id %}">{{ topic }}</a>
      {% empty %}
       <li>No topics have been added yet.</li>
      {% endfor %}
   </ul>
-  <a href="{% url 'learning_logs:new_topic' %}">Add a new topic:</a>
+  <a href="{% url 'journal_logs:new_topic' %}">Add a new topic:</a>
 {endblock content %}
 -->
 
@@ -26,12 +26,12 @@ template base.html-->
      {% for topic in topics %}
        <li>
         <h3>
-         <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
+         <a href="{% url 'journal_logs:topic' topic.id %}">{{ topic }}</a>
 	</h3>
        </li>
      {% empty %}
       <li>No topics have been added yet.</li>
      {% endfor %}
   </ul>
-  <h3><a href="{% url 'learning_logs:new_topic' %}">Add a new topic:</h3>
+  <h3><a href="{% url 'journal_logs:new_topic' %}">Add a new topic:</h3>
 {% endblock content %}

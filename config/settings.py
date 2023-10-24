@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #My project apps
-    'learning_logs',
+    'journal_logs',
     'users',
 
     #my project third party apps

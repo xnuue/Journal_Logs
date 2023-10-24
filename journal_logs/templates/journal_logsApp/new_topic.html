@@ -1,6 +1,6 @@
 <!-- same styling as the login page. we want the whole pages to look consistent in style-->
 
-{% extends "learning_logsApp/base.html" %}
+{% extends "journal_logsApp/base.html" %}
 
 {% load bootstrap3 %}
 
@@ -9,7 +9,7 @@
 {% endblock header %}
 
 {% block content %}
-	<form action="{% url 'learning_logs:new_topic' %}" method='post' class="form">
+	<form action="{% url 'journal_logs:new_topic' %}" method='post' class="form">
        		{% csrf_token %}
 		{% bootstrap_form form %}
 		{% buttons %}

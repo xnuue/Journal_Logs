@@ -1,11 +1,11 @@
-{%extends 'learning_logsApp/base.html' %}
+{%extends 'journal_logsApp/base.html' %}
 
 <!--
 {block content %}
   <p>Topic: {{ topic }}</p>
   <p>Entries:</p>
   <p>
-     <a href="{% url 'learning_logs:new_entry' topic.id %}">add new entry</a>
+     <a href="{% url 'journal_logs:new_entry' topic.id %}">add new entry</a>
   </p>
   <ul>
      {for each_entry in entries %}
@@ -13,7 +13,7 @@
 	   <p> {{ each_entry.date_added|date:'M d, Y H:i' }}</p>
 	   <p> {{ each_entry.text|linebreaks }}</p>
 	   <p>
-	       <a href="{% url 'learning_logs:edit_entry' each_entry.id %}">edit entry</a>
+	       <a href="{% url 'journal_logs:edit_entry' each_entry.id %}">edit entry</a>
 	   </p>
 -->
 
@@ -23,7 +23,7 @@
 
 {% block content %}
   <p>
-     <a href="{% url 'learning_logs:new_entry' topic.id %}">add new entry</a>
+     <a href="{% url 'journal_logs:new_entry' topic.id %}">add new entry</a>
   </p>
 
   {% for each_entry in entries %}
@@ -33,7 +33,7 @@
 	   <h3>
               {{ each_entry.date_added|date:'M d, Y H:i' }}
 	      <small>
-		 <a href="{% url 'learning_logs:edit_entry' each_entry.id %}">edit entry</a>
+		 <a href="{% url 'journal_logs:edit_entry' each_entry.id %}">edit entry</a>
 	      </small>
 	   </h3>
 	</div>

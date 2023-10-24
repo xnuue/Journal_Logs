@@ -1,4 +1,4 @@
-{% extends 'learning_logsApp/base.html' %}
+{% extends 'journal_logsApp/base.html' %}
 <!--
 {block content %}
     {% if form.errors %}
@@ -8,7 +8,7 @@
       {% csrf_token %}
       {{ form.as_p}}
       <button name="submit">log in</button>
-      <input type="hidden" name="next" value="{% url 'learning_logs:index' %}"/>
+      <input type="hidden" name="next" value="{% url 'journal_logs:index' %}"/>
     </form>
 {endblock content %}
 -->
@@ -26,6 +26,6 @@
 		{% buttons %}		
       			<button name="submit" class="btn btn-primary">log in</button>
 		{% endbuttons %}
-		<input type="hidden" name="next" value="{% url 'learning_logs:topics' %}"/>
+		<input type="hidden" name="next" value="{% url 'journal_logs:topics' %}"/>
     	</form>
 {% endblock content %}
